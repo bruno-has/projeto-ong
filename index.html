@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta ONG</title>
+    <link rel="stylesheet" href="css/global.css" media="all">
+    <link rel="shortcut icon" href="midia/favicon.png" type="image/png">
+    <script src="https://kit.fontawesome.com/43b4096ba1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div class="main-header">
+                <div class="logo">
+                    <a href="index.html"><img src="midia/logo.png" alt="Logo"></a>
+                </div>
+                <button class="btn-nav">
+                    <i class="fa-solid fa-bars" style="color: #2f88ad"></i>
+                </button>
+            </div>
+            <nav class="lista-nav">
+                <ul>
+                    <li>Projetos</li>
+                    <li>Cadastro</li>
+                    <li>Sobre</li>
+                    <li>Contato</li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="banner">
+                <section class="info">
+                    <p>Somos uma organização sem fins lucrativos ajudando à transformar vidas por meio de ações sociais.</p>
+                    <div class="botoes">
+                        <button class="btn-projetos">
+                            Ver Projetos
+                        </button>
+                        <button class="btn-cadastro">
+                            Doe Agora
+                        </button>
+                    </div>
+                </section>
+            </div>
+            <section class="vmv">
+                <button class="btn-voltar">
+                    <i class="fa-solid fa-chevron-left" style="color: var(--azul1);"></i>
+                </button>
+                <div class="carrossel">
+                    <article class="card">
+                        <img src="midia/missao.jpg" alt="Missão">
+                        <p>Promover o bem-estar social e ambiental por meio de projetos transformadores e do engajamento de voluntários comprometidos com o impacto social.</p>
+                    </article>
+                    <article class="card">
+                        <img src="midia/visao.jpg" alt="Visão">
+                        <p>Ser uma referência em inovação social, ampliando o alcance das ações e fortalecendo redes de solidariedade.</p>
+                    </article>
+                    <article class="card">
+                        <img src="midia/valores.jpg" alt="Valores">
+                        <p>Transparência, sustentabilidade, colaboração, respeito e inovação.</p>
+                    </article>
+                </div>
+                <button class="btn-avancar">
+                    <i class="fa-solid fa-chevron-right" style="color: var(--azul1);"></i>
+                </button>
+            </section>
+            <section>
+                <h1>Histórico e Conquistas</h1>
+                <ul>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </section>
+            <section>
+                <h1>Equipe</h1>
+                <article>
+                    <h2>Nome</h2>
+                    <h3>Cargo</h3>
+                </article>
+                <article>
+                    <h2>Nome</h2>
+                    <h3>Cargo</h3>
+                </article>
+                <article>
+                    <h2>Nome</h2>
+                    <h3>Cargo</h3>
+                </article>
+            </section>
+            <section>
+                <h1>Relatório e Transparência</h1>
+                <p>Acompanhe nossos relatórios e prestações de contas.</p>
+                <button class="btn-relatorio">
+                    Confira Aqui
+                </button>
+            </section>
+        </main>
+
+        <footer>
+            &copy; ConectaONG  
+        </footer>
+    </div>
+    <script>
+        const btn = document.querySelector('.btn-nav')
+        const lista = document.querySelector('.lista-nav')
+
+        btn.addEventListener('click', () => {
+            lista.classList.toggle('mostrar')
+        })
+    </script>
+</body>
+</html>
