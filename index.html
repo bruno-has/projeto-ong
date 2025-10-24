@@ -21,10 +21,9 @@
             </div>
             <nav class="lista-nav">
                 <ul>
-                    <li>Projetos</li>
-                    <li>Cadastro</li>
-                    <li>Sobre</li>
-                    <li>Contato</li>
+                    <a href="paginas/projetos.html"><li>Projetos</li></a>
+                    <a href="paginas/cadastro.html"><li>Cadastro</li></a>
+                    <a href="#contato"><li>Contato</li></a>
                 </ul>
             </nav>
         </header>
@@ -36,10 +35,10 @@
                     <p>Somos uma organização sem fins lucrativos ajudando à transformar vidas por meio de ações sociais.</p>
                     <div class="botoes">
                         <button class="btn-projetos">
-                            Ver Projetos
+                            <a href="paginas/projetos.html">Ver Projetos</a>
                         </button>
                         <button class="btn-cadastro">
-                            Doe Agora
+                            <a href="paginas/cadastro.html">Doe Agora</a>
                         </button>
                     </div>
                 </section>
@@ -59,7 +58,7 @@
                     </article>
                     <article class="card">
                         <img src="midia/valores.jpg" alt="Valores">
-                        <ul style="line-height: 25px;">
+                        <ul class="lista">
                             <li>Transparência</li>
                             <li>Sustentabilidade</li>
                             <li>Colaboração</li>
@@ -74,34 +73,39 @@
                 </button>
             </section>
             <section class="historico">
-                <h1 style="text-align: center;">Histórico e Conquistas</h1>
+                <h1>Histórico e Conquistas</h1>
                 <div class="grupo">
-                    <ul>
-                        <li>2020 - Fundação e primeiros projetos locais</li>
-                        <li>2022 - Certificação de boas práticas</li>
-                        <li>2023 - Certificação de Governança e Transparência</li>
-                        <li>2024 - Mais de 120 projetos beneficiando mais de 25.000 pessoas</li>
+                    <ul class="lista">
+                        <li><strong>2020</strong> - Fundação e primeiros projetos</li>
+                        <li><strong>2022</strong> - Certificado de boas práticas</li>
+                        <li><strong>2023</strong> - Certificado de Transparência</li>
+                        <li><strong>2025</strong> - Consolidação da Governança</li>
                     </ul>
                 </div>
             </section>
-            <section>
+            <section id="equipe">
                 <h1>Equipe</h1>
-                <article class="grupo">
-                    <h2>Nome</h2>
-                    <h3>Cargo</h3>
-                </article>
-                <article class="grupo">
-                    <h2>Nome</h2>
-                    <h3>Cargo</h3>
-                </article>
-                <article class="grupo">
-                    <h2>Nome</h2>
-                    <h3>Cargo</h3>
-                </article>
+                <div class="pessoas">
+                    <div class="pessoa">
+                        <div class="foto" style="background-color: palevioletred;">AL</div>
+                        <h2>Ana Laura</h2>
+                        <h3>Diretora Executiva</h3>
+                    </div>
+                    <div class="pessoa">
+                        <div class="foto" style="background-color: lightblue;">JP</div>
+                        <h2>João Pereira</h2>
+                        <h3>Coordenador de Projetos</h3>
+                    </div>
+                    <div class="pessoa">
+                        <div class="foto" style="background-color: lightsalmon;">RL</div>
+                        <h2>Rafael Lima</h2>
+                        <h3>Financeiro</h3>
+                    </div>
+                </div>
             </section>
             <section>
                 <h1>Relatório e Transparência</h1>
-                <div class="grupo">
+                <div class="relatorio">
                     <p>Acompanhe nossos relatórios e prestações de contas.</p>
                     <div class="botoes">
                         <button class="btn-relatorio">
@@ -110,10 +114,22 @@
                     </div>
                 </div>
             </section>
+
+            <section id="contato">
+                <h1>Contato</h1>
+                <div class="relatorio">
+                    <p>Entre em contato para mais informações.</p>
+                    <ul class="lista">
+                        <li><strong>E-mail:</strong> contato@conectaong.org.br</li>
+                        <li><strong>Telefone:</strong> (99) 99999-9999</li>
+                    </ul>
+                </div>
+            </section>
         </main>
 
         <footer>
-            <h1>&copy; ConectaONG </h1> 
+            <p>&copy; ConectaONG</p>
+            <p>Política de Privacidade • Termos de Uso</p> 
         </footer>
     </div>
     <script>
@@ -124,6 +140,11 @@
             lista.classList.toggle('mostrar')
         })
 
+
+        const btnRelatorio = document.querySelector('.btn-relatorio')
+        btnRelatorio.addEventListener('click', () => {
+            alert("(Simulacão) Baixando Relatório de Transparência")
+        })
         
         const carrossel = document.querySelector('.carrossel')
         let index = 1

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta ONG</title>
+    <link rel="stylesheet" href="../css/global.css" media="all">
+    <link rel="shortcut icon" href="../midia/favicon.png" type="image/png">
+    <script src="https://kit.fontawesome.com/43b4096ba1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div class="main-header">
+                <div class="logo">
+                    <a href="../index.html"><img src="../midia/logo.png" alt="Logo"></a>
+                </div>
+                <button class="btn-nav">
+                    <i class="fa-solid fa-bars" style="color: #2f88ad"></i>
+                </button>
+            </div>
+            <nav class="lista-nav">
+                <ul>
+                    <a href="../index.html"><li>Início</li></a>
+                    <a href="../paginas/projetos.html"><li>Projetos</li></a>
+                    <a href="../index.html#contato"><li>Contato</li></a>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <h1>Cadastro</h1>
+            <div class="cadastro">
+                <p>Preencha todos os dados abaixo.</p>
+                <fieldset>
+                    <label for="categoria">Categoria</label>
+                    <select name="categoria" id="categoria">
+                        <option value>Selecione</option>
+                        <option value="adm">Administrador da ONG</option>
+                        <option value="vol">Voluntário</option>
+                        <option value="doa">Doador</option>
+                        <option value="vis">Visitante</option>
+                    </select>
+                </fieldset>
+    
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" name="nome" id="nome" required minlength="2" maxlength="100" autocomplete="name">
+    
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" required autocomplete="email">
+    
+                    <label for="cpf">CPF</label>
+                    <input type="text" name="cpf" id="cpf" inputmode="numeric" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"  maxlength="14" placeholder="000.000.000-00">
+    
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" name="telefone" id="telefone" inputmode="tel" required pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" maxlength="15" placeholder="(00) 00000-0000" autocomplete="tel">
+    
+                    <label for="nascimento">Data de Nascimento</label>
+                    <input type="date" name="nascimento" id="nascimento" required>
+                </fieldset>
+    
+                <fieldset>
+                    <legend>Endereço</legend>
+                    <label for="cep">CEP</label>
+                    <input type="text" name="cep" id="cep" inputmode="numeric" placeholder="00000-000" pattern="\d{5}-\d{3}" maxlength="9" required>
+    
+                    <label for="endereco">Endereço</label>
+                    <input type="text" name="endereco" id="endereco" autocomplete="street-address">
+    
+                    <label for="cidade">Cidade</label>
+                    <input type="text" name="cidade" id="cidade" required autocomplete="address-level2">
+    
+                    <label for="estado">Estado</label>
+                    <select name="estado" id="estado">
+                        <option value>Selecione</option>
+                        <option value="AC">AC - Acre</option>
+                        <option value="AL">AL - Alagoas</option>
+                        <option value="AP">AP - Amapá</option>
+                        <option value="AM">AM - Amazonas</option>
+                        <option value="BA">BA - Bahia</option>
+                        <option value="CE">CE - Ceará</option>
+                        <option value="DF">DF - Distrito Federal</option>
+                        <option value="ES">ES - Espírito Santo</option>
+                        <option value="GO">GO - Goiás</option>
+                        <option value="MA">MA - Maranhão</option>
+                        <option value="MT">MT - Mato Grosso</option>
+                        <option value="MS">MS - Mato Grosso do Sul</option>
+                        <option value="MG">MG - Minas Gerais</option>
+                        <option value="PA">PA - Pará</option>
+                        <option value="PB">PB - Paraíba</option>
+                        <option value="PR">PR - Paraná</option>
+                        <option value="PE">PE - Pernambuco</option>
+                        <option value="PI">PI - Piauí</option>
+                        <option value="RJ">RJ - Rio de Janeiro</option>
+                        <option value="RN">RN - Rio Grande do Norte</option>
+                        <option value="RS">RS - Rio Grande do Sul</option>
+                        <option value="RO">RO - Rondônia</option>
+                        <option value="RR">RR - Roraima</option>
+                        <option value="SC">SC - Santa Catarina</option>
+                        <option value="SP">SP - São Paulo</option>
+                        <option value="SE">SE - Sergipe</option>
+                        <option value="TO">TO - Tocantins</option>
+                    </select>
+                </fieldset>
+    
+                <button class="cadastrar" type="submit" style="margin-top: 20px;">Cadastrar</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; ConectaONG</p>
+            <p><a href="#">Política de Privacidade</a> • <a href="#">Termos de Uso</a></p> 
+        </footer>
+    </div>
+    <script>
+        const btn = document.querySelector('.btn-nav')
+        const lista = document.querySelector('.lista-nav')
+
+        btn.addEventListener('click', () => {
+            lista.classList.toggle('mostrar')
+        })
+    </script>
+</body>
+</html>

@@ -1,13 +1,15 @@
 @charset "UTF-8";
 
 :root {
-    --fundo-principal: #efefef;
+    --fundo-principal: #f1f1f1;
     --fundo-conteudo: #fff;
     --azul1: #2f88ad;
     --azul2: #255c74;
     --texto: #000;
+    --subtexto: #555;
     --sombra-escura: 0px 2px 5px rgba(0, 0, 0, 0.7);
     --sombra-clara: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    --borda: 4px outset var(--azul1);
     --transicao: all .2s ease;
 }
 
@@ -46,6 +48,10 @@ main {
 
 footer {
     grid-area: -2 / 1 / -1 / -1;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 5px;
+    margin-top: 20px;
 }
 
 /* HEADER */
@@ -101,16 +107,16 @@ footer {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
-    width: 85%;
+    width: 95%;
     max-width: 400px;
-    height: 180px;
+    height: 200px;
+    text-align: center;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 5px;
     border: 4px outset var(--azul1);
     box-shadow: var(--sombra-escura);
-    padding: 10px;
+    padding: 5px;
     margin-bottom: 15%;
-
 }
 
 .botoes {
@@ -120,7 +126,7 @@ footer {
     padding-top: 10px;
 }
 
-.btn-projetos, .btn-cadastro, .btn-relatorio {
+.btn-projetos, .btn-cadastro, .btn-relatorio, .cadastrar {
     font-size: 1em;
     font-weight: bolder;
     border: 3px solid var(--azul2);
@@ -134,7 +140,7 @@ footer {
     color: var(--azul2);
 }
 
-.btn-cadastro, .btn-relatorio {
+.btn-cadastro, .btn-relatorio, .cadastrar {
     background: linear-gradient(to bottom, var(--azul1), var(--azul2));
     color: #fff;
 }
@@ -219,13 +225,111 @@ footer {
 }
 
 .grupo {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     background-color: var(--fundo-conteudo);
     box-shadow: var(--sombra-escura);
+    border: 4px outset var(--azul1);
     border-radius: 10px;
     padding: 10px;
-    margin: 15px;
 }
 
+.lista {
+    line-height: 25px;
+}
+
+#equipe {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+.pessoas {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pessoa {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+    background-color: var(--fundo-conteudo);
+    border: 4px outset var(--azul1);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.relatorio {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100%;
+    background-color: var(--fundo-conteudo);
+    border: var(--borda);
+    border-radius: 10px;
+    box-shadow: var(--sombra-escura);
+    padding: 10px;
+    margin: 25px 0px;
+}
+
+.grupos {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--fundo-conteudo);
+    border: var(--borda);
+    border-radius: 10px;
+    box-shadow: var(--sombra-escura);
+    width: 100%;
+}
+
+.card-projeto {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 90%;
+    max-width: 400px;
+    padding: 15px;
+}
+
+.cadastro {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 90%;
+    background-color: var(--fundo-conteudo);
+    border: var(--borda);
+    border-radius: 10px;
+    box-shadow: var(--sombra-escura);
+    padding: 15px;
+    margin: auto;
+}
+
+input, select, fieldset {
+    width: 98%;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+fieldset {
+    margin: 10px 0px;
+}
 /* GLOBAL */
 
 button {
@@ -242,9 +346,15 @@ ul {
     list-style-type: none;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 h1 {
     font-size: 24px;
     text-align: center;
+    margin: 25px 0px;
 }
 
 h2 {
@@ -253,11 +363,13 @@ h2 {
 
 h3 {
     font-size: 16px;
+    font-weight: normal;
+    color: var(--subtexto);
 }
 
 /* Sub-Class */
 
 .mostrar {
-    height: 7em;
+    height: 5.5em;
     overflow: visible;
 }
