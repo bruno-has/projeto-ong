@@ -30,7 +30,7 @@
         
         <main>
             <h1>Cadastro</h1>
-            <div class="cadastro">
+            <div class="conteudo">
                 <p>Preencha todos os dados abaixo.</p>
                 <fieldset>
                     <label for="categoria">Categoria</label>
@@ -104,8 +104,9 @@
                         <option value="TO">TO - Tocantins</option>
                     </select>
                 </fieldset>
-    
-                <button class="cadastrar" type="submit" style="margin-top: 20px;">Cadastrar</button>
+                <div class="botoes">
+                    <button class="btn-cadastrar" type="submit" style="margin-top: 20px;">Cadastrar</button>
+                </div>                
             </div>
         </main>
 
@@ -114,13 +115,7 @@
             <p><a href="#">Política de Privacidade</a> • <a href="#">Termos de Uso</a></p> 
         </footer>
     </div>
-    <script>
-        const btn = document.querySelector('.btn-nav')
-        const lista = document.querySelector('.lista-nav')
-
-        btn.addEventListener('click', () => {
-            lista.classList.toggle('mostrar')
-        })
-    </script>
+    
+    <script src="../js/script.js"></script>
 </body>
 </html>

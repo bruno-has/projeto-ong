@@ -30,7 +30,6 @@ body {
     display: grid;
     grid-template-rows: auto 1fr 50px;
     grid-template-columns: 5px 1fr 5px;
-    width: 100vw;
     height: 100vh;
     background-color: var(--fundo-principal);
 }
@@ -50,8 +49,8 @@ footer {
     grid-area: -2 / 1 / -1 / -1;
     font-size: 0.9em;
     text-align: center;
-    padding: 5px;
-    margin-top: 20px;
+    background-color: var(--fundo-conteudo);
+    padding: 10px 0px;
 }
 
 /* HEADER */
@@ -60,7 +59,9 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 10px 0px 10px;
+    width: 95%;
+    padding-top: 10px;
+    margin: auto;
 }
 
 .logo {
@@ -94,6 +95,7 @@ footer {
 
 .banner {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: flex-end;
     height: 90vh;
@@ -103,17 +105,17 @@ footer {
     box-shadow: var(--sombra-clara);
 }
 
-.info {
+.card-info {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-around;
+    justify-content: center;
     width: 95%;
     max-width: 400px;
     height: 200px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 5px;
-    border: 4px outset var(--azul1);
+    border: var(--borda);
     box-shadow: var(--sombra-escura);
     padding: 5px;
     margin-bottom: 15%;
@@ -121,18 +123,14 @@ footer {
 
 .botoes {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    padding-top: 10px;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 15px;
 }
 
-.btn-projetos, .btn-cadastro, .btn-relatorio, .cadastrar {
-    font-size: 1em;
-    font-weight: bolder;
+.btn-projetos, .btn-cadastro, .btn-relatorio, .btn-cadastrar {
     border: 3px solid var(--azul2);
-    border-radius: 5px;
-    padding: 5px;
-    transition: var(--transicao);
 }
 
 .btn-projetos {
@@ -140,20 +138,15 @@ footer {
     color: var(--azul2);
 }
 
-.btn-cadastro, .btn-relatorio, .cadastrar {
+.btn-cadastro, .btn-relatorio, .btn-cadastrar {
     background: linear-gradient(to bottom, var(--azul1), var(--azul2));
     color: #fff;
 }
 
-.btn-projetos:hover, .btn-cadastro:hover, .btn-relatorio:hover {
-    box-shadow: var(--sombra-clara);
-    transform: scale(1.05);
-}
-
-.missao {
+#missao {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     height: 400px;
     margin-top: 50px;
@@ -161,6 +154,7 @@ footer {
 
 .carrossel {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     position: relative;
     width: 100%;
@@ -168,36 +162,36 @@ footer {
     transition: var(--transicao);
 }
 
-.card {
+.card-carrossel {
     position: absolute;
     width: 80%;
     max-width: 600px;
-    height: 350px;
+    height: 370px;
     background-color: var(--fundo-conteudo);
     box-shadow: var(--sombra-escura);
     border-radius: 10px;
-    border: 4px outset var(--azul1);
+    border: var(--borda);
     padding: 5px;
     transition: var(--transicao);
 }
 
-.card img {
-    width: 80%;
+.card-carrossel img {
+    width: 70%;
 }
 
-.card:nth-child(1) {
+.card-carrossel:nth-child(1) {
     transform: translateX(-100px) scale(0.8) rotateY(30deg);
     opacity: 0.3;
     z-index: 1;
 }
 
-.card:nth-child(2) {
+.card-carrossel:nth-child(2) {
     transform: translateX(0px) scale(1) rotateY(0deg);
     opacity: 1;
     z-index: 2;
 }
 
-.card:nth-child(3) {
+.card-carrossel:nth-child(3) {
     transform: translateX(100px) scale(0.8) rotateY(-30deg);
     opacity: 0.3;
     z-index: 1;
@@ -206,9 +200,7 @@ footer {
 .btn-voltar, .btn-avancar {
     height: 30px;
     font-size: 1.5em;
-    padding: 0px 10px;
-    margin: auto;
-    transition: var(--transicao);
+    margin: auto 10px;
     z-index: 2;
 }
 
@@ -217,28 +209,20 @@ footer {
     transform: scale(1.2);
 }
 
-.historico {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    width: 100%;
-}
-
-.grupo {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: var(--fundo-conteudo);
-    box-shadow: var(--sombra-escura);
-    border: 4px outset var(--azul1);
-    border-radius: 10px;
-    padding: 10px;
-}
-
 .lista {
     line-height: 25px;
+}
+
+.conteudo {
+    align-items: center;
+    width: 95%;
+    max-width: 800px;
+    background-color: var(--fundo-conteudo);
+    box-shadow: var(--sombra-escura);
+    border: var(--borda);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px auto;
 }
 
 #equipe {
@@ -257,18 +241,20 @@ footer {
 .pessoa {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     width: 120px;
     background-color: var(--fundo-conteudo);
-    border: 4px outset var(--azul1);
-    border-radius: 5px;
+    border: var(--borda);
+    border-radius: 10px;
+    box-shadow: var(--sombra-escura);
     padding: 5px;
 }
 
 .foto {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     width: 50px;
@@ -276,49 +262,16 @@ footer {
     border-radius: 50%;
 }
 
-.relatorio {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    width: 100%;
-    background-color: var(--fundo-conteudo);
-    border: var(--borda);
-    border-radius: 10px;
-    box-shadow: var(--sombra-escura);
-    padding: 10px;
-    margin: 25px 0px;
-}
-
-.grupos {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    align-items: center;
-    background-color: var(--fundo-conteudo);
-    border: var(--borda);
-    border-radius: 10px;
-    box-shadow: var(--sombra-escura);
-    width: 100%;
+#contato {
+    margin-bottom: 20px;
 }
 
 .card-projeto {
     display: flex;
     flex-flow: row nowrap;
-    width: 90%;
-    max-width: 400px;
+    width: 100%;
+    max-width: 350px;
     padding: 15px;
-}
-
-.cadastro {
-    display: flex;
-    flex-flow: column nowrap;
-    width: 90%;
-    background-color: var(--fundo-conteudo);
-    border: var(--borda);
-    border-radius: 10px;
-    box-shadow: var(--sombra-escura);
-    padding: 15px;
-    margin: auto;
 }
 
 input, select, fieldset {
@@ -330,12 +283,21 @@ input, select, fieldset {
 fieldset {
     margin: 10px 0px;
 }
+
 /* GLOBAL */
 
 button {
+    font-weight: bolder;
     background-color: transparent;
     border: none;
+    border-radius: 5px;
+    padding: 5px;
     cursor: pointer;
+    transition: var(--transicao);
+}
+
+button:hover {
+    transform: scale(1.05);
 }
 
 img {
@@ -354,7 +316,7 @@ a {
 h1 {
     font-size: 24px;
     text-align: center;
-    margin: 25px 0px;
+    margin: 15px 0px;
 }
 
 h2 {
