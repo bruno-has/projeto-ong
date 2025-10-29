@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conecta ONG</title>
     <link rel="stylesheet" href="../css/global.css" media="all">
+    <link rel="stylesheet" href="../css/style.css" media="screen and (min-width: 768px)">
     <link rel="shortcut icon" href="../midia/favicon.png" type="image/png">
     <script src="https://kit.fontawesome.com/43b4096ba1.js" crossorigin="anonymous"></script>
 </head>
@@ -18,19 +19,20 @@
                 <button class="btn-nav">
                     <i class="fa-solid fa-bars" style="color: #2f88ad"></i>
                 </button>
+                <nav class="lista-nav">
+                    <ul>
+                        <a href="../index.html"><li>Início</li></a>
+                        <a href="../paginas/projetos.html"><li>Projetos</li></a>
+                        <a href="../index.html#contato"><li>Contato</li></a>
+                    </ul>
+                </nav>
             </div>
-            <nav class="lista-nav">
-                <ul>
-                    <a href="../index.html"><li>Início</li></a>
-                    <a href="../paginas/projetos.html"><li>Projetos</li></a>
-                    <a href="../index.html#contato"><li>Contato</li></a>
-                </ul>
-            </nav>
         </header>
         
         <main>
+            <br>
             <h1>Cadastro</h1>
-            <div class="conteudo">
+            <div class="conteudoP">
                 <p>Preencha todos os dados abaixo.</p>
                 <fieldset>
                     <label for="categoria">Categoria</label>
@@ -42,36 +44,27 @@
                         <option value="vis">Visitante</option>
                     </select>
                 </fieldset>
-    
                 <fieldset>
                     <legend>Dados Pessoais</legend>
                     <label for="nome">Nome Completo</label>
                     <input type="text" name="nome" id="nome" required minlength="2" maxlength="100" autocomplete="name">
-    
                     <label for="email">E-mail</label>
                     <input type="email" name="email" id="email" required autocomplete="email">
-    
                     <label for="cpf">CPF</label>
                     <input type="text" name="cpf" id="cpf" inputmode="numeric" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"  maxlength="14" placeholder="000.000.000-00">
-    
                     <label for="telefone">Telefone</label>
                     <input type="tel" name="telefone" id="telefone" inputmode="tel" required pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" maxlength="15" placeholder="(00) 00000-0000" autocomplete="tel">
-    
                     <label for="nascimento">Data de Nascimento</label>
                     <input type="date" name="nascimento" id="nascimento" required>
                 </fieldset>
-    
                 <fieldset>
                     <legend>Endereço</legend>
                     <label for="cep">CEP</label>
                     <input type="text" name="cep" id="cep" inputmode="numeric" placeholder="00000-000" pattern="\d{5}-\d{3}" maxlength="9" required>
-    
                     <label for="endereco">Endereço</label>
                     <input type="text" name="endereco" id="endereco" autocomplete="street-address">
-    
                     <label for="cidade">Cidade</label>
                     <input type="text" name="cidade" id="cidade" required autocomplete="address-level2">
-    
                     <label for="estado">Estado</label>
                     <select name="estado" id="estado">
                         <option value>Selecione</option>
@@ -104,15 +97,15 @@
                         <option value="TO">TO - Tocantins</option>
                     </select>
                 </fieldset>
-                <div class="botoes">
-                    <button class="btn-cadastrar" type="submit" style="margin-top: 20px;">Cadastrar</button>
-                </div>                
+                <button class="btn-cadastrar" type="submit">Cadastrar</button>            
             </div>
         </main>
 
         <footer>
-            <p>&copy; ConectaONG</p>
-            <p><a href="#">Política de Privacidade</a> • <a href="#">Termos de Uso</a></p> 
+            <div class="rodape">
+                <p>&copy; ConectaONG</p>
+                <p><a href="#">Política de Privacidade</a> • <a href="#">Termos de Uso</a></p>
+            </div> 
         </footer>
     </div>
     
