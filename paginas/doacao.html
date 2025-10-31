@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doação Rápida</title>
+    <link rel="shortcut icon" href="../midia/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/global.css" media="all">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <script src="https://kit.fontawesome.com/43b4096ba1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div class="main-header">
+                <div class="logo">
+                    <a href="../index.html"><img src="../midia/logo.png" alt="Logo"></a>
+                </div>
+                <button class="btn-nav">
+                    <i class="fa-solid fa-bars" style="color: var(--azul1)"></i>
+                </button>
+                <nav class="lista-nav">
+                    <ul>
+                        <a href="../index.html"><li>Início</li></a>
+                        <a href="../paginas/projetos.html"><li>Projetos</li></a>
+                        <a href="../paginas/cadastro.html"><li>Cadastro</li></a>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="container-centro">
+                <h1>Doação Rápida</h1>
+                <div class="conteudoP">
+                    <p>Contribua com nossas ações por meio de doações seguras.</p>
+                    <form method="post" id="formulario-doacao">
+                        <fieldset>
+                            <label for="inome">Seu nome:</label>
+                            <input type="text" name="inome" id="inome" required minlength="2">
+    
+                            <label for="iemail">Email:</label>
+                            <input type="email" name="iemail" id="iemail" required>
+
+                            <label for="iopcao">Projeto:</label>
+                            <select name="iopcao" id="iopcao" required>
+                                <option>Selecione</option>
+                                <option value="1">Atendimento básico</option>
+                                <option value="2">Capacitação profissional</option>
+                                <option value="3">Combate a fome</option>
+                                <option value="4">Cursos de idiomas</option>
+                                <option value="5">Esportes</option>
+                                <option value="6">Inclusão social</option>
+                                <option value="7">Oficina de arte</option>
+                                <option value="8">Plantio de árvores e hortas</option>
+                            </select>
+    
+                            <label for="ivalor">Valor: </label>
+                            <input type="number" name="ivalor" id="ivalor" required>
+                        </fieldset>
+                        <input class="btn-doacao-rapida" type="submit" value="Doação rápida">
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div id="rodape">
+                <p>&copy; ConectaONG</p>
+                <p><a class="link">Política de Privacidade</a> • <a class="link">Termos de Uso</a></p>
+            </div> 
+        </footer>
+    </div>
+    
+    <script src="../js/global.js"></script>
+    <script src="../js/cadastro.js"></script>
+</body>
+</html>

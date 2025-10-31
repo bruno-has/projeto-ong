@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conecta ONG</title>
-    <link rel="stylesheet" href="css/global.css" media="all">
-    <link rel="stylesheet" href="css/style.css" media="screen and (min-width: 768px)">
     <link rel="shortcut icon" href="midia/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/global.css" media="all">
+    <link rel="stylesheet" href="css/home.css">
     <script src="https://kit.fontawesome.com/43b4096ba1.js" crossorigin="anonymous"></script>
     
 </head>
@@ -18,13 +18,13 @@
                     <a href="index.html"><img src="midia/logo.png" alt="Logo" loading="lazy"></a>
                 </div>
                 <button class="btn-nav">
-                    <i class="fa-solid fa-bars" style="color: #2f88ad"></i>
+                    <i class="fa-solid fa-bars" style="color: var(--azul1)"></i>
                 </button>
                 <nav class="lista-nav">
                     <ul>
                         <a href="paginas/projetos.html"><li>Projetos</li></a>
                         <a href="paginas/cadastro.html"><li>Cadastro</li></a>
-                        <a href="#contato"><li>Contato</li></a>
+                        <a class="btn-contato"><li>Contato</li></a>
                     </ul>
                 </nav>
             </div>
@@ -34,7 +34,7 @@
             <div class="banner">
                 <section class="card-info">
                     <h1>Bem-Vindo!</h1>
-                    <p>Somos uma organização sem fins lucrativos ajudando à transformar vidas por meio de ações sociais, educacionais e ambientais.</p>
+                    <p>Somos uma organização sem fins lucrativos ajudando à transformar vidas por meio de projetos de educação, sustentabilidade, cidadania e inclusão.</p>
                     <div class="botoes">
                         <button class="btn-projetos">
                             <a href="paginas/projetos.html">Ver Projetos</a>
@@ -103,50 +103,85 @@
                     </section>
                     <section id="equipe">
                         <h1>Equipe</h1>
-                        <div class="pessoas">
-                            <div class="pessoa">
-                                <div class="foto">
-                                    <picture>
-                                        <source srcset="midia/ana-laura.webp" type="image/webp">
-                                        <source srcset="midia/ana-laura.jpg" type="image/jpeg">
-                                        <img src="midia/ana-laura.jpg" alt="Foto da Ana Laura" loading="lazy">
-                                    </picture>
+                        <div class="conteudoP">
+                            <p>A <strong>ConectaONG</strong> é formada por pessoas apaixonadas pela transformação social, profissionais parceiros e voluntários que dedicam tempo e talento para fazer a diferença.</p>
+                            <div class="pessoas">
+                                <div class="pessoa">
+                                    <div class="foto" style="background-color: lightpink">AL</div>
+                                    <h3>Ana Laura</h3>
+                                    <h4>Diretora Executiva</h4>
                                 </div>
-                                <h3>Ana Laura</h3>
-                                <h4>Diretora Executiva</h4>
+                                <div class="pessoa">
+                                    <div class="foto" style="background-color: lightsteelblue">JP</div>
+                                    <h3>João Pereira</h3>
+                                    <h4>Coordenador de Projetos</h4>
+                                </div>
+                                <div class="pessoa">
+                                    <div class="foto" style="background-color: lightgoldenrodyellow">RL</div>
+                                    <h3>Rafael Lima</h3>
+                                    <h4>Financeiro</h4>
+                                </div>
+                                <div class="pessoa">
+                                    <div class="foto" style="background-color: lightgreen">IS</div>
+                                    <h3>Isabela Souza</h3>
+                                    <h4>Comunicação</h4>
+                                </div>
                             </div>
-                            <div class="pessoa">
-                                <div class="foto">
-                                    <picture>
-                                        <source srcset="midia/joao-pereira.webp" type="image/webp">
-                                        <source srcset="midia/joao-pereira.jpg" type="image/jpeg">
-                                        <img src="midia/joao-pereira.jpg" alt="Foto do João Pereira" loading="lazy">
-                                    </picture>
-                                </div>
-                                <h3>João Pereira</h3>
-                                <h4>Coordenador de Projetos</h4>
-                            </div>
-                            <div class="pessoa">
-                                <div class="foto">
-                                    <picture>
-                                        <source srcset="midia/rafael-lima.webp" type="image/webp">
-                                        <source srcset="midia/rafael-lima.jpg" type="image/jpeg">
-                                        <img src="midia/rafael-lima.jpg" alt="Foto do Rafael Lima" loading="lazy">
-                                    </picture>
-                                </div>
-                                <h3>Rafael Lima</h3>
-                                <h4>Financeiro</h4>
+                        </div>
+                    </section>
+                    <section id="relatorio">
+                        <h1>Relatório e Transparência</h1>
+                        <div class="conteudoP">
+                            <p>Acompanhe nossos relatórios e prestações de contas.</p>
+                            <div class="botoes">
+                                <button class="btn-relatorio link">
+                                    Relatório Anual
+                                </button>
+                                <button class="btn-relatorio link">
+                                    Prestação de Contas
+                                </button>
+                                <button class="btn-relatorio link">
+                                    Certificado Digital
+                                </button>
                             </div>
                         </div>
                     </section>
                 </div>
                 <div class="coluna-direita">
-                    <section id="relatorio">
-                        <h1>Relatório e Transparência</h1>
+                    <section id="doar">
+                        <h1>Como Doar</h1>
                         <div class="conteudoP">
-                            <p>Acompanhe nossos relatórios e prestações de contas.</p>
-                            <button class="btn-relatorio">
-                                Confira Aqui
+                            <p>Toda doação ajuda a financiar nossos projetos, ampliar nosso alcance e transformais mais vidas. Formas de doação:</p>
+                            <ul class="lista">
+                                <li><strong>Doação online</strong> - via Pix, cartão ou transferência.</li>
+                                <li><strong>Doações materiais</strong> - Roupas, alimentos, brinquedos e equipamentos.</li>
+                                <li><strong>Parcerias empresariais</strong> - Empresas podem contribuir com recursos, serviços ou voluntariado corporativo.</li>
+                            </ul>
+                            <p>Todas as doações são registradas e aplicadas de forma ética e comprovada.</p>
+                            <div class="botoes">
+                                <button class="btn-doacao">
+                                    <a href="paginas/doacao.html" target="_blank">Doação Rápida</a>
+                                </button>
+                                <button class="btn-cadastro">
+                                    <a href="paginas/cadastro.html">Cadastre-se</a>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="voluntariado">
+                        <h1>Voluntariado</h1>
+                        <div class="conteudoP">
+                            <p>Junte-se a nossa rede de voluntários. Você pode atuar em diversos projetos de acordo com sua disponibilidade e perfil.</p>
+                            <p>Como funciona o processo</p>
+                            <ol class="lista">
+                                <li>Preencha o formulário de inscrição.</li>
+                                <li>Candidate-se às vagas que interessam.</li>
+                                <li>Aguarde o contato da equipe.</li>
+                                <li>Participe de seleção quando necessário (entrevista / treinamento).</li>
+                                <li>Registre suas horas e receba certificados digitais.</li>
+                            </ol>
+                            <button class="btn-voluntario">
+                                <a href="paginas/cadastro.html">Quero ser voluntário</a>
                             </button>
                         </div>
                     </section>
@@ -157,7 +192,13 @@
                             <ul class="lista">
                                 <li><strong>E-mail:</strong> contato@conectaong.org.br</li>
                                 <li><strong>Telefone:</strong> (99) 99999-9999</li>
-                            </ul>
+                            </ul>    
+                            <div class="redes-sociais">
+                                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                                <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -165,13 +206,14 @@
         </main>
 
         <footer>
-            <div class="rodape">
+            <div id="rodape">
                 <p>&copy; ConectaONG</p>
-                <p><a href="#">Política de Privacidade</a> • <a href="#">Termos de Uso</a></p>
+                <p><a class="link">Política de Privacidade</a> • <a class="link">Termos de Uso</a></p>
             </div> 
         </footer>
     </div>
     
-    <script src="js/script.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/carrossel.js"></script>
 </body>
 </html>

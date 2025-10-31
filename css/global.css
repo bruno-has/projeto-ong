@@ -22,15 +22,16 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: var(--fundo-principal);
+    scroll-behavior: smooth;
 }
 
-/* Layout */
-
+/* LAYOUT */
 #container {
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 5px 1fr 5px;
     height: 100vh;
+    width: 100%;
     background-color: var(--fundo-principal);
 }
 
@@ -50,8 +51,7 @@ footer {
     background-color: var(--fundo-conteudo);
 }
 
-/* HEADER */
-
+/* MENU */
 .main-header {
     display: flex;
     flex-flow: row wrap;
@@ -83,6 +83,7 @@ footer {
     width: 100%;
     margin: 5px;
     overflow: hidden;
+    opacity: 0;
     transition: var(--transicao);
 }
 
@@ -96,140 +97,48 @@ footer {
     color: var(--azul1);
 }
 
-/* MAIN */
-
-.banner {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: flex-end;
-    height: 90vh;
-    max-height: 700px;
-    background: url(../midia/fundoP.jpg) center no-repeat;
-    background-size: cover;
-    box-shadow: var(--sombra-fraca);
+/* SUB-CLASS MENU */
+.mostrar {
+    height: 5.5em;
+    overflow: visible;
+    opacity: 1;
 }
 
-.card-info {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-evenly;
-    width: 95%;
-    max-width: 550px;
-    height: 40vh;
-    max-height: 250px;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 5px;
-    border: var(--borda);
-    box-shadow: var(--sombra-forte);
-    padding: 10px;
-    margin-bottom: 15%;
-}
-
+/* BOTÕES */
 .botoes {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    gap: 30px;
+    gap: 5px;
 }
 
-.btn-projetos, .btn-cadastro, .btn-relatorio, .btn-cadastrar {
+.btn-projetos, .btn-cadastro, .btn-relatorio, .btn-voluntario, .btn-cadastrar, .btn-doacao, .btn-doacao-rapida {
     border: 3px solid var(--azul2);
 }
 
-.btn-projetos {
+.btn-projetos, .btn-voluntario, .btn-doacao {
     background-color: transparent;
     color: var(--azul2);
 }
 
-.btn-cadastro, .btn-relatorio, .btn-cadastrar {
-    background: linear-gradient(to bottom, var(--azul1), var(--azul2));
+.btn-cadastro, .btn-relatorio, .btn-cadastrar, .btn-doacao-rapida {
+    background-image: linear-gradient(to top, var(--azul2), var(--azul1));
     color: #fff;
 }
 
-#missao {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    width: 100%;
-    max-width: 520px;
-    height: 400px;
-    margin: 25px auto;
-}
-
-.carrossel {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    text-align: center;
-    transition: var(--transicao);
-}
-
-.card-carrossel {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-    position: absolute;
-    width: 80%;
-    max-width: 300px;
-    height: 400px;
-    background-color: var(--fundo-conteudo);
-    box-shadow: var(--sombra-forte);
-    border-radius: 10px;
-    border: var(--borda);
-    padding: 10px;
-    transition: var(--transicao);
-}
-
-.card-carrossel picture {
-    width: 75%;
-}
-
-.card-carrossel:nth-child(1) {
-    transform: translateX(-100px) scale(0.8) rotateY(30deg);
-    opacity: 0.3;
-    z-index: 1;
-}
-
-.card-carrossel:nth-child(2) {
-    transform: translateX(0px) scale(1) rotateY(0deg);
-    opacity: 1;
-    z-index: 2;
-}
-
-.card-carrossel:nth-child(3) {
-    transform: translateX(100px) scale(0.8) rotateY(-30deg);
-    opacity: 0.3;
-    z-index: 1;
-}
-
-.btn-voltar, .btn-avancar {
-    font-size: 1.5em;
-    margin: auto 10px;
-    z-index: 2;
-}
-
-.btn-voltar:hover, .btn-avancar:hover {
-    text-shadow: var(--sombra-forte);
-    transform: scale(1.2);
-}
-
+/* ELEMENTOS GLOBAIS */
 .lista li {
-    border: 2px solid var(--subtexto);
+    border: 2px solid var(--azul2);
     border-radius: 15px;
-    box-shadow: var(--sombra-fraca);
+    box-shadow: var(--sombra-forte);
     padding: 5px;
-    margin: 5px;
+    margin: 5px 0px;
 }
 
 .conteudoP, .conteudoG {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     background-color: var(--fundo-conteudo);
@@ -244,69 +153,12 @@ footer {
     max-width: 550px;
 }
 
-#equipe {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-}
-
-.pessoas {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-
-.pessoa {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    width: 40%;
-    max-width: 200px;
-    background-color: var(--fundo-conteudo);
-    border: var(--borda);
-    border-radius: 10px;
-    box-shadow: var(--sombra-forte);
-    padding: 10px;
-    margin: 15px 5px;
-}
-
-.foto img {
-    width: 75%;
-    border-radius: 50%;
-}
-
-#contato {
-    margin-bottom: 20px;
-}
-
-.card-projeto {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    width: 100%;
-    padding: 15px;
-}
-
-.card-projeto img {
-    border: var(--borda);
-    border-radius: 15px;
-}
-
-input, select, fieldset {
-    width: 98%;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-fieldset {
-    margin: 10px 0px;
+.link {
+    cursor: pointer;
 }
 
 /* FOOTER */
-
-.rodape {
+#rodape {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -315,8 +167,7 @@ fieldset {
     padding: 10px 0px;
 }
 
-/* GLOBAL */
-
+/* TAGS GLOBAIS */
 button {
     font-size: 16px;
     font-weight: bolder;
@@ -341,9 +192,14 @@ ul {
     list-style-type: none;
 }
 
+ol {
+    list-style-position: inside;
+}
+
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 h1 {
@@ -362,14 +218,83 @@ h3 {
 }
 
 h4 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: normal;
     color: var(--subtexto);
 }
 
-/* Sub-Class */
+p {
+    font-size: 16px;
+    margin: 5px;
+}
+@media screen and (min-width: 768px) {
+    /* MENU */
+    .main-header {
+        flex-flow: row nowrap;
+        padding: 10px 20px;
+    }
+    
+    .btn-nav {
+        display: none;
+    }
+    
+    .lista-nav {
+        height: auto;
+        width: 50%;
+        overflow: visible;
+        opacity: 1;
+    }
+    
+    .lista-nav ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        gap: 5%;
+        font-weight: bold;
+        color: var(--azul1);
+    }
 
-.mostrar {
-    height: 5.5em;
-    overflow: visible;
+    .lista-nav li:hover {
+        transform: translateY(-5px);
+    }
+
+    /* FOOTER */
+    .rodape {
+        font-size: 1.2em;
+    }
+
+    /* TAGS GLOBAIS */
+    button {
+        font-size: 22px;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+    
+    h4 {
+        font-size: 20px;
+    }
+
+    p, ul {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .main-header {
+        width: 80%;
+    }
+
+    .main-header ul {
+        font-size: 20px;
+    }
 }

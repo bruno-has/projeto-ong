@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conecta ONG</title>
-    <link rel="stylesheet" href="../css/global.css" media="all">
-    <link rel="stylesheet" href="../css/style.css" media="screen and (min-width: 768px)">
+    <title>Projetos</title>
     <link rel="shortcut icon" href="../midia/favicon.png" type="image/png">
+    <link rel="stylesheet" href="../css/global.css" media="all">
+    <link rel="stylesheet" href="../css/projetos.css">
     <script src="https://kit.fontawesome.com/43b4096ba1.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -17,7 +17,7 @@
                     <a href="../index.html"><img src="../midia/logo.png" alt="Logo"></a>
                 </div>
                 <button class="btn-nav">
-                    <i class="fa-solid fa-bars" style="color: #2f88ad"></i>
+                    <i class="fa-solid fa-bars" style="color: var(--azul1)"></i>
                 </button>
                 <nav class="lista-nav">
                     <ul>
@@ -30,157 +30,165 @@
         </header>
 
         <main>
-            <br>
-            <h1>Projetos</h1>
-            <div class="conteudoG">
-                <div class="card-projeto">
-                    <img src="../midia/projeto1.jpg" alt="Projeto Combate a fome">
-                    <div class="informacao">
-                        <h2>Combate a fome</h2>
-                        <p>Projeto de distribuição de alimentos em comunidades carentes.</p>
+            <div class="container-projeto">
+                <h1>Projetos</h1>
+                <div class="conteudoG">
+                    <div class="filtros">
+                        <button class="filtro ativo" data-categoria="todos">Todos</button>
+                        <button class="filtro" data-categoria="educacao">Educação</button>
+                        <button class="filtro" data-categoria="saude">Saúde</button>
+                        <button class="filtro" data-categoria="meio-ambiente">Meio Ambiente</button>
+                        <button class="filtro" data-categoria="assistencia-social">Assistência Social</button>
                     </div>
-                    <div class="doacao">
-                        <p>Meta atual: <strong>R$50.000,00</strong></p>
-                        <progress class="progresso-doacao" value="10000" max="50000" aria-valuemin="0" aria-valuemax="50000"></progress>
-                        <div class="botoes">
-                            <button class="btn-cadastro">
-                                Doe Agora
-                            </button>
-                            <button>
-                                Voluntario
-                            </button>
+                    <div class="card-projeto" data-categoria="assistencia-social">
+                        <img src="../midia/combate-fome.jpg" alt="Projeto Combate a fome" loading="lazy">
+                        <div class="informacao">
+                            <h3>Combate a fome</h3>
+                            <p>Projeto de distribuição de alimentos em comunidades carentes.</p>
                         </div>
-                    </div>
-                </div>
-                <div class="card-projeto">
-                    <img src="../midia/projeto2.jpg" alt="Projeto">
-                    <div class="informacao">
-                        <h2>Atendimento básico</h2>
-                        <p>Consultas médicas, odontológicas e psicológicas em comunidades carentes.</p>
                         <div class="doacao">
-                            <p>Meta atual: <strong>R$20.000,00</strong></p>
-                            <progress class="progresso-doacao" value="13000" max="20000" aria-valuemin="0" aria-valuemax="50000"></progress>
+                            <p>Meta atual: <strong>R$30.000,00</strong></p>
+                            <abbr title="19564 / 30000"><progress class="progresso-doacao" value="19564" max="30000" aria-valuemin="0" aria-valuemax="30000"></progress></abbr>
                             <div class="botoes">
                                 <button class="btn-cadastro">
-                                    Doe Agora
+                                    <a href="../paginas/cadastro.html">Faça uma doação</a>
                                 </button>
-                                <button>
-                                    Voluntario
+                                <button class="btn-voluntario">
+                                    <a href="../paginas/cadastro.html"></a>Seja voluntário
                                 </button>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-projeto">
-                    <img src="../midia/projeto3.jpg" alt="Projeto">
-                    <div class="informacao">
-                        <h2>Capacitação profissional</h2>
-                        <p>Iniciativas de educação profissionalizante para comunidades em vulnerabilidade social.</p>
-                        <div class="doacao">
-                            <p>Meta atual: <strong>R$30.000,00</strong></p>
-                            <progress class="progresso-doacao" value="8000" max="30000" aria-valuemin="0" aria-valuemax="50000"></progress>
-                            <div class="botoes">
-                                <button class="btn-cadastro">
-                                    Doe Agora
-                                </button>
-                                <button>
-                                    Voluntario
-                                </button>
+                    <div class="card-projeto" data-categoria="saude">
+                        <img src="../midia/atendimento-basico.jpg" alt="Projeto Atendimento básico" loading="lazy">
+                        <div class="informacao">
+                            <h3>Atendimento básico</h3>
+                            <p>Consultas médicas, odontológicas e psicológicas em comunidades carentes.</p>
+                            <div class="doacao">
+                                <p>Meta atual: <strong>R$50.000,00</strong></p>
+                                <abbr title="19785 / 50000"><progress class="progresso-doacao" value="19785" max="50000" aria-valuemin="0" aria-valuemax="50000"></progress></abbr>
+                                <div class="botoes">
+                                    <button class="btn-cadastro">
+                                        <a href="../paginas/cadastro.html">Faça uma doação</a>
+                                    </button>
+                                    <button class="btn-voluntario">
+                                        <a href="../paginas/cadastro.html"></a>Seja voluntário
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-projeto">
-                    <img src="../midia/projeto4.jpg" alt="Projeto">
-                    <div class="informacao">
-                        <h2>Oficina de arte</h2>
-                        <p>Promover atividades artísticas como pintura, teatro, dança, música ou fotografia para estimular a criatividade e ampliar o acesso à cultura.</p>
-                        <div class="doacao">
-                            <p>Meta atual: <strong>R$30.000,00</strong></p>
-                            <progress class="progresso-doacao" value="8000" max="30000" aria-valuemin="0" aria-valuemax="50000"></progress>
-                            <div class="botoes">
-                                <button class="btn-cadastro">
-                                    Doe Agora
-                                </button>
-                                <button>
-                                    Voluntario
-                                </button>
+                    <div class="card-projeto" data-categoria="educacao">
+                        <img src="../midia/capacitacao-profissional.jpg" alt="Projeto Capacitação profissional" loading="lazy">
+                        <div class="informacao">
+                            <h3>Capacitação profissional</h3>
+                            <p>Iniciativas de educação profissionalizante para comunidades em vulnerabilidade social.</p>
+                            <div class="doacao">
+                                <p>Meta atual: <strong>R$10.000,00</strong></p>
+                                <abbr title="8374 / 10000"><progress class="progresso-doacao" value="8374" max="10000" aria-valuemin="0" aria-valuemax="10000"></progress></abbr>
+                                <div class="botoes">
+                                    <button class="btn-cadastro">
+                                        <a href="../paginas/cadastro.html">Faça uma doação</a>
+                                    </button>
+                                    <button class="btn-voluntario">
+                                        <a href="../paginas/cadastro.html"></a>Seja voluntário
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-projeto">
-                    <img src="../midia/projeto5.jpg" alt="Projeto">
-                    <div class="informacao">
-                        <h2>Plantio de árvores e hortas urbanas</h2>
-                        <p>Ações de reflorestamento e criação de hortas, promovendo sustentabilidade, educação ambiental e segurança alimentar para comunidades locais.</p>
-                        <div class="doacao">
-                            <p>Meta atual: <strong>R$30.000,00</strong></p>
-                            <progress class="progresso-doacao" value="8000" max="30000" aria-valuemin="0" aria-valuemax="50000"></progress>
-                            <div class="botoes">
-                                <button class="btn-cadastro">
-                                    Doe Agora
-                                </button>
-                                <button>
-                                    Voluntario
-                                </button>
+                    <div class="card-projeto" data-categoria="educacao">
+                        <img src="../midia/oficina-arte.jpg" alt="Projeto Oficina de arte" loading="lazy">
+                        <div class="informacao">
+                            <h3>Oficina de arte</h3>
+                            <p>Promover atividades artísticas como pintura, teatro, dança, entre outros para estimular a criatividade e ampliar o acesso à cultura.</p>
+                            <div class="doacao">
+                                <p>Meta atual: <strong>R$8.000,00</strong></p>
+                                <abbr title="1837 / 8000"><progress class="progresso-doacao" value="1837" max="8000" aria-valuemin="0" aria-valuemax="8000"></progress></abbr>
+                                <div class="botoes">
+                                    <button class="btn-cadastro">
+                                        <a href="../paginas/cadastro.html">Faça uma doação</a>
+                                    </button>
+                                    <button class="btn-voluntario">
+                                        <a href="../paginas/cadastro.html"></a>Seja voluntário
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-projeto">
-                    <img src="../midia/projeto6.jpg" alt="Projeto 3">
-                    <div class="informacao">
-                        <h2>Inclusão digital</h2>
-                        <p>Cursos de informática e capacitações digitais para jovens, adultos e idosos, ampliando oportunidades de aprendizado, trabalho e participação social.</p>
-                        <div class="doacao">
-                            <p>Meta atual: <strong>R$30.000,00</strong></p>
-                            <progress class="progresso-doacao" value="8000" max="30000" aria-valuemin="0" aria-valuemax="50000"></progress>
-                            <div class="botoes">
-                                <button class="btn-cadastro">
-                                    Doe Agora
-                                </button>
-                                <button>
-                                    Voluntario
-                                </button>
+                    <div class="card-projeto" data-categoria="meio-ambiente">
+                        <img src="../midia/plantio-hortas.jpg" alt="Projeto Plantio de árvores e hortas urbanas" loading="lazy">
+                        <div class="informacao">
+                            <h3>Plantio de árvores e hortas urbanas</h3>
+                            <p>Ações de reflorestamento e criação de hortas, promovendo sustentabilidade, educação ambiental e segurança alimentar para comunidades locais.</p>
+                            <div class="doacao">
+                                <p>Meta atual: <strong>R$12.000,00</strong></p>
+                                <abbr title="4845"><progress class="progresso-doacao" value="4845" max="12000" aria-valuemin="0" aria-valuemax="12000"></progress></abbr>
+                                <div class="botoes">
+                                    <button class="btn-cadastro">
+                                        <a href="../paginas/cadastro.html">Faça uma doação</a>
+                                    </button>
+                                    <button class="btn-voluntario">
+                                        <a href="../paginas/cadastro.html"></a>Seja voluntário
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-projeto">
-                    <img src="../midia/projeto7.jpg" alt="Projeto 3">
-                    <div class="informacao">
-                        <h2>Esportes</h2>
-                        <p>Apoiar escolinhas de futebol, artes marciais e outras modalidades esportivas como ferramentas de disciplina, saúde e cidadania.</p>
-                        <div class="doacao">
-                            <p>Meta atual: <strong>R$30.000,00</strong></p>
-                            <progress class="progresso-doacao" value="8000" max="30000" aria-valuemin="0" aria-valuemax="50000"></progress>
-                            <div class="botoes">
-                                <button class="btn-cadastro">
-                                    Doe Agora
-                                </button>
-                                <button>
-                                    Voluntario
-                                </button>
+                    <div class="card-projeto" data-categoria="assistencia-social">
+                        <img src="../midia/inclusao-digital.jpg" alt="Projeto Inclusão digital" loading="lazy">
+                        <div class="informacao">
+                            <h3>Inclusão digital</h3>
+                            <p>Cursos de informática e capacitações digitais para jovens, adultos e idosos, ampliando oportunidades de aprendizado, trabalho e participação social.</p>
+                            <div class="doacao">
+                                <p>Meta atual: <strong>R$20.000,00</strong></p>
+                                <abbr title="12872 / 20000"><progress class="progresso-doacao" value="12872" max="20000" aria-valuemin="0" aria-valuemax="20000"></progress></abbr>
+                                <div class="botoes">
+                                    <button class="btn-cadastro">
+                                        <a href="../paginas/cadastro.html">Faça uma doação</a>
+                                    </button>
+                                    <button class="btn-voluntario">
+                                        <a href="../paginas/cadastro.html"></a>Seja voluntário
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-projeto">
-                    <img src="../midia/projeto8.jpg" alt="Projeto 3">
-                    <div class="informacao">
-                        <h2>Cursos de idiomas</h2>
-                        <p>Disponibilizar aulas de inglês, espanhol ou outras línguas para ampliar oportunidades acadêmicas, profissionais e de integração cultural.</p>
-                        <div class="doacao">
-                            <p>Meta atual: <strong>R$30.000,00</strong></p>
-                            <progress class="progresso-doacao" value="8000" max="30000" aria-valuemin="0" aria-valuemax="50000"></progress>
-                            <div class="botoes">
-                                <button class="btn-cadastro">
-                                    Doe Agora
-                                </button>
-                                <button>
-                                    Voluntario
-                                </button>
+                    <div class="card-projeto" data-categoria="saude">
+                        <img src="../midia/esportes.jpg" alt="Projeto Esportes" loading="lazy">
+                        <div class="informacao">
+                            <h3>Esportes</h3>
+                            <p>Apoiar escolinhas de futebol, artes marciais e outras modalidades esportivas como ferramentas de disciplina, saúde e cidadania.</p>
+                            <div class="doacao">
+                                <p>Meta atual: <strong>R$15.000,00</strong></p>
+                                <abbr title="10870 / 15000"><progress class="progresso-doacao" value="10870" max="15000" aria-valuemin="0" aria-valuemax="15000"></progress></abbr>
+                                <div class="botoes">
+                                    <button class="btn-cadastro">
+                                        <a href="../paginas/cadastro.html">Faça uma doação</a>
+                                    </button>
+                                    <button class="btn-voluntario">
+                                        <a href="../paginas/cadastro.html"></a>Seja voluntário
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-projeto" data-categoria="educacao">
+                        <img src="../midia/idiomas.jpg" alt="Projeto Curso de idiomas" loading="lazy">
+                        <div class="informacao">
+                            <h3>Cursos de idiomas</h3>
+                            <p>Disponibilizar aulas de inglês, espanhol ou outras línguas para ampliar oportunidades acadêmicas, profissionais e de integração cultural.</p>
+                            <div class="doacao">
+                                <p>Meta atual: <strong>R$8.000,00</strong></p>
+                                <abbr title="1986 / 8000"><progress class="progresso-doacao" value="1986" max="8000" aria-valuemin="0" aria-valuemax="8000"></progress></abbr>
+                                <div class="botoes">
+                                    <button class="btn-cadastro">
+                                        <a href="../paginas/cadastro.html">Faça uma doação</a>
+                                    </button>
+                                    <button class="btn-voluntario">
+                                        <a href="../paginas/cadastro.html"></a>Seja voluntário
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -189,13 +197,14 @@
         </main>
 
         <footer>
-            <div class="rodape">
+            <div id="rodape">
                 <p>&copy; ConectaONG</p>
-                <p>Política de Privacidade • Termos de Uso</p>
-            </div>
+                <p><a class="link">Política de Privacidade</a> • <a class="link">Termos de Uso</a></p>
+            </div> 
         </footer>
     </div>
     
-    <script src="../js/script.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/projetos.js"></script>
 </body>
 </html>
