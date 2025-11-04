@@ -17,14 +17,14 @@
                 <div class="logo">
                     <a href="index.html"><img src="midia/logo.png" alt="Logo" loading="lazy"></a>
                 </div>
-                <button class="btn-nav">
+                <button aria-label="Menu" class="btn-nav">
                     <i class="fa-solid fa-bars" style="color: var(--azul1)"></i>
                 </button>
                 <nav class="lista-nav">
                     <ul>
-                        <a href="paginas/projetos.html"><li>Projetos</li></a>
-                        <a href="paginas/cadastro.html"><li>Cadastro</li></a>
-                        <a class="btn-contato"><li>Contato</li></a>
+                        <li><a href="paginas/projetos.html">Projetos</a></li>
+                        <li><a href="paginas/cadastro.html">Cadastro</a></li>
+                        <li class="btn-contato">Contato</li>
                     </ul>
                 </nav>
             </div>
@@ -36,17 +36,17 @@
                     <h1>Bem-Vindo!</h1>
                     <p>Somos uma organização sem fins lucrativos ajudando à transformar vidas por meio de projetos de educação, sustentabilidade, cidadania e inclusão.</p>
                     <div class="botoes">
-                        <button class="btn-projetos">
+                        <span class="btn-projetos">
                             <a href="paginas/projetos.html">Ver Projetos</a>
-                        </button>
-                        <button class="btn-cadastro">
-                            <a href="paginas/cadastro.html">Doe Agora</a>
-                        </button>
+                        </span>
+                        <span class="btn-cadastro">
+                            <a href="paginas/cadastro.html">Cadastre-se</a>
+                        </span>
                     </div>
                 </section>
             </div>
             <section id="missao">
-                <button class="btn-voltar">
+                <button aria-label="Esquerda" class="btn-voltar">
                     <i class="fa-solid fa-chevron-left" style="color: var(--azul1);"></i>
                 </button>
                 <div class="carrossel">
@@ -82,7 +82,7 @@
                         </ul>
                     </article>
                 </div>
-                <button class="btn-avancar">
+                <button aria-label="Direita" class="btn-avancar">
                     <i class="fa-solid fa-chevron-right" style="color: var(--azul1);"></i>
                 </button>
             </section>
@@ -159,12 +159,12 @@
                             </ul>
                             <p>Todas as doações são registradas e aplicadas de forma ética e comprovada.</p>
                             <div class="botoes">
-                                <button class="btn-doacao">
-                                    <a href="paginas/doacao.html" target="_blank">Doação Rápida</a>
-                                </button>
-                                <button class="btn-cadastro">
-                                    <a href="paginas/cadastro.html">Cadastre-se</a>
-                                </button>
+                                <span class="btn-doacao">
+                                    <a href="paginas/doacao.html">Doação Rápida</a>
+                                </span>
+                                <span class="btn-cadastro">
+                                    <a href="paginas/cadastro.html?categoria=doa">Cadastre-se</a>
+                                </span>
                             </div>
                         </div>
                     </section>
@@ -180,9 +180,9 @@
                                 <li>Participe de seleção quando necessário (entrevista / treinamento).</li>
                                 <li>Registre suas horas e receba certificados digitais.</li>
                             </ol>
-                            <button class="btn-voluntario">
-                                <a href="paginas/cadastro.html">Quero ser voluntário</a>
-                            </button>
+                            <span class="btn-voluntario">
+                                <a href="paginas/cadastro.html?categoria=vol">Quero ser voluntário</a>
+                            </span>
                         </div>
                     </section>
                     <section id="contato">
@@ -194,10 +194,13 @@
                                 <li><strong>Telefone:</strong> (99) 99999-9999</li>
                             </ul>    
                             <div class="redes-sociais">
-                                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-                                <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+
+                                <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
+
+                                <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+
+                                <a href="https://www.youtube.com/" target="_blank" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
                             </div>
                         </div>
                     </section>
@@ -214,6 +217,6 @@
     </div>
     
     <script src="js/global.js"></script>
-    <script src="js/carrossel.js"></script>
+    <script src="js/home.js"></script>
 </body>
 </html>

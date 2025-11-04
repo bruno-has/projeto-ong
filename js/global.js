@@ -13,19 +13,10 @@ document.addEventListener('click', (event) => {
     }
 })
 
-/* Scrollar suavemente até sessão contato */
-const contato = document.querySelector('.btn-contato')
-contato.addEventListener('click', () => {
-    window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: 'smooth'
-    })
-})
-
-/* Simulação */
+/* Simulação botão */
 const links = document.querySelectorAll('.link')
 links.forEach((link) => {
     link.addEventListener('click', () => {
-        alert('(Simulação) Arquivo baixado com sucesso!')
+        alert('[Simulação] Arquivo baixado com sucesso!')
     })
 })

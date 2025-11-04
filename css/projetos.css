@@ -28,6 +28,14 @@
 
 .card-projeto {
     flex-flow: column nowrap;
+    box-shadow: var(--sombra-forte);
+    border-radius: 15px;
+    margin: 5px;
+    transition: var(--transicao);
+}
+
+.card-projeto:hover {
+    background-image: linear-gradient(to bottom, var(--azul1) 15%, #fefefe, #fff);
 }
 
 .card-projeto img {
@@ -39,23 +47,27 @@
     display: none;
 }
 
+
 @media screen and (min-width: 768px) {
     .card-projeto {
         display: grid;
-        grid-template-rows: repeat(2, auto);
+        grid-template-rows: 1fr auto;
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        margin: 20px;
+        gap: 0px 10px;
+    }
+
+    .card-projeto:hover {
+        background-image: linear-gradient(to right, var(--azul1), #fefefe, #fff);
     }
     
     .card-projeto img {
         grid-area: 1 / 1 / -1 / -2;
     }
-
+    
     .informacao {
         grid-area: 1 / 2 / -2 / -1;
     }
-
+    
     .doacao {
         grid-area: 2 / 2 / -1 / -1;
     }
@@ -66,9 +78,14 @@
         display: grid;
         grid-template-rows: auto 1fr;
         grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
     }
 
     .filtros {
         grid-area: 1 / 1 / 2 / -1;
+    }  
+
+    .card-projeto {
+        height: 250px;
     }
 }

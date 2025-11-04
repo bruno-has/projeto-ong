@@ -8,7 +8,7 @@
     --texto: #000;
     --subtexto: #555;
     --sombra-forte: 0px 2px 5px rgba(0, 0, 0, 0.7);
-    --sombra-fraca: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    --sombra-fraca: 0px 1px 2px rgba(0, 0, 0, 0.5);
     --borda: 4px outset var(--azul1);
     --transicao: all .2s ease;
 }
@@ -20,7 +20,7 @@
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: var(--fundo-principal);
     scroll-behavior: smooth;
 }
@@ -88,6 +88,7 @@ footer {
 }
 
 .lista-nav li {
+    text-shadow: var(--sombra-fraca);
     padding: 5px;
     cursor: pointer;
     transition: var(--transicao);
@@ -95,6 +96,11 @@ footer {
 
 .lista-nav li:hover {
     color: var(--azul1);
+}
+
+.lista-nav a {
+    display: inline-block;
+    width: 100%;
 }
 
 /* SUB-CLASS MENU */
@@ -117,7 +123,7 @@ footer {
 }
 
 .btn-projetos, .btn-voluntario, .btn-doacao {
-    background-color: transparent;
+    background-color: #fff;
     color: var(--azul2);
 }
 
@@ -130,7 +136,7 @@ footer {
 .lista li {
     border: 2px solid var(--azul2);
     border-radius: 15px;
-    box-shadow: var(--sombra-forte);
+    box-shadow: var(--sombra-fraca);
     padding: 5px;
     margin: 5px 0px;
 }
@@ -153,6 +159,10 @@ footer {
     max-width: 550px;
 }
 
+.conteudoG {
+    max-width: 1300px;
+}
+
 .link {
     cursor: pointer;
 }
@@ -168,7 +178,7 @@ footer {
 }
 
 /* TAGS GLOBAIS */
-button {
+button, span {
     font-size: 16px;
     font-weight: bolder;
     background-color: transparent;
@@ -180,7 +190,7 @@ button {
     transition: var(--transicao);
 }
 
-button:hover {
+button:hover, span:hover {
     transform: scale(1.05);
 }
 
@@ -214,7 +224,7 @@ h2 {
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 h4 {
@@ -224,9 +234,9 @@ h4 {
 }
 
 p {
-    font-size: 16px;
-    margin: 5px;
+    margin: 2px;
 }
+
 @media screen and (min-width: 768px) {
     /* MENU */
     .main-header {
@@ -259,15 +269,11 @@ p {
     }
 
     /* FOOTER */
-    .rodape {
-        font-size: 1.2em;
+    #rodape {
+        font-size: 1em;
     }
 
     /* TAGS GLOBAIS */
-    button {
-        font-size: 22px;
-    }
-    
     h1 {
         font-size: 32px;
     }
@@ -277,15 +283,11 @@ p {
     }
     
     h3 {
-        font-size: 24px;
+        font-size: 22px;
     }
     
     h4 {
         font-size: 20px;
-    }
-
-    p, ul {
-        font-size: 18px;
     }
 }
 
@@ -295,6 +297,6 @@ p {
     }
 
     .main-header ul {
-        font-size: 20px;
+        font-size: 22px;
     }
 }

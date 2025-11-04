@@ -5,17 +5,20 @@
 }
 
 fieldset {
+    border-radius: 5px;
+    padding: 5px;
     margin: 10px 0px;
 }
 
-input, select, fieldset {
+input, select {
+    font-weight: bold;
     width: 98%;
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
 }
 
-input:focus {
+input:focus, select:focus {
     border: var(--borda);
 }
 

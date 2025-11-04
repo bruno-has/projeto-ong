@@ -1,25 +1,26 @@
+/* Máscaras inputs */
 document.addEventListener('input', (e) => {
     const pergunta = e.target;
 
     if (pergunta.id === 'cpf') {
         pergunta.value = pergunta.value
-        .replace(/\D/g, '')
-        .replace(/(\d{3})(\d)/, '$1.$2')
-        .replace(/(\d{3})(\d)/, '$1.$2')
-        .replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+        .replace(/\D/g, '')                     // Remove qualquer caractere que não seja número
+        .replace(/(\d{3})(\d)/, '$1.$2')        // Adiciona o primeiro ponto após os 3 primeiros digitos
+        .replace(/(\d{3})(\d)/, '$1.$2')        // Adiciona o segundo ponto após os próximos 3 dígitos
+        .replace(/(\d{3})(\d{1,2})$/, '$1-$2'); // Adiciona o traço antes dos 2 últimos números
     }
 
     if (pergunta.id === 'telefone') {
         pergunta.value = pergunta.value
-        .replace(/\D/g, '')
-        .replace(/(\d{2})(\d)/, '($1) $2')
-        .replace(/(\d{5})(\d{4})$/, '$1-$2');
+        .replace(/\D/g, '')                     // Remove qualquer caractere que não seja número
+        .replace(/(\d{2})(\d)/, '($1) $2')      // Adiciona os parênteses em volta do DDD
+        .replace(/(\d{5})(\d{4})$/, '$1-$2');   // Coloca o traço entre os 5 primeiros e os 4 últimos digitos
     }
 
     if (pergunta.id === 'cep') {
         pergunta.value = pergunta.value
-        .replace(/\D/g, '')
-        .replace(/(\d{5})(\d{3})$/, '$1-$2');
+        .replace(/\D/g, '')                     // Remove qualquer caractere que não seja número
+        .replace(/(\d{5})(\d{3})$/, '$1-$2');   // Adiciona o traço após os 5 primeiros dígitos
     }
 })
 
@@ -27,6 +28,8 @@ document.addEventListener('input', (e) => {
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('#formulario-cadastro')
     const nasc = document.querySelector('#nascimento')
+
+    /* Validação para cadastro de pessoas com 18 anos ou mais */
     if (form) {
         form.addEventListener('submit', (e) => {
             const dataNasc = new Date(nasc.value)
@@ -44,16 +47,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 nasc.value = ''
                 nasc.focus()
             } else {
-                alert('(Simulação) Cadastro realizado com sucesso!')
+                alert('[Simulação] Cadastro realizado com sucesso!')
                 form.reset()
             }
-            e.preventDefault()
+            e.preventDefault() // Impede o envio real do formulário
         })
     }
 
     const formulario = document.querySelector('#formulario-doacao')
     const inputValor = document.querySelector('#ivalor')
     const projeto = document.querySelector('#iopcao')
+
+    /* Validação doação maior que 0 e validação da opção de projeto */
     if (formulario) {
         formulario.addEventListener('submit', (e) => {
             
@@ -75,8 +80,23 @@ document.addEventListener('DOMContentLoaded', () => {
             alert(`Você doou R$${valor.toFixed(2)} para o projeto "${projetoSelecionado}". Obrigado por sua contribuição!`)
             formulario.reset()
 
-            e.preventDefault()
+            e.preventDefault() // Impede o envio real do formulário
         })
     }
+
+    /* Verifica se a URL contém algum parâmetro */
+    const parametro = new URLSearchParams(window.location.search)
+    const seletorCadastro = parametro.get('categoria')
+    const seletorProjeto = parametro.get('iopcao')
+    if (seletorCadastro) {
+        const categoria = document.querySelector('#categoria')
+        categoria.value = seletorCadastro
+    }
+    
+    if (seletorProjeto) {
+        const opcao = document.querySelector('#iopcao')
+        opcao.value = seletorProjeto
+    }
 })  
+
     

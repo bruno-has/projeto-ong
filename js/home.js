@@ -1,7 +1,18 @@
+/* Scrollar suavemente até sessão contato */
+const contato = document.querySelector('.btn-contato')
+contato.addEventListener('click', () => {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: 'smooth'
+    })
+})
+
+
+/* Carrossel missão, visão e valores */
 const carrossel = document.querySelector('.carrossel')
 let index = 1
 
-const updateCarrossel = () => {
+function updateCarrossel() {
     let cards = carrossel.children
     for (let i = 0; i < cards.length; i++) {
         cards[i].style.zIndex = 1
