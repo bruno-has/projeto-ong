@@ -13,6 +13,8 @@ fieldset {
 input, select {
     font-weight: bold;
     width: 98%;
+    color: var(--texto);
+    background-color: var(--fundo-conteudo);
     border-radius: 5px;
     padding: 5px;
     margin: 5px;

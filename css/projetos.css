@@ -17,6 +17,7 @@
 }
 
 .filtro {
+    color: var(--texto);
     border: 2px solid black;
     margin: 5px auto;
 }
@@ -35,7 +36,7 @@
 }
 
 .card-projeto:hover {
-    background-image: linear-gradient(to bottom, var(--azul1) 15%, #fefefe, #fff);
+    background-image: linear-gradient(to bottom, var(--azul1) 10%, var(--fundo-conteudo));
 }
 
 .card-projeto img {
@@ -57,7 +58,7 @@
     }
 
     .card-projeto:hover {
-        background-image: linear-gradient(to right, var(--azul1), #fefefe, #fff);
+        background-image: linear-gradient(to right, var(--azul1), var(--fundo-conteudo));
     }
     
     .card-projeto img {
