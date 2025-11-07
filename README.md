@@ -26,3 +26,7 @@ Este projeto foi desenvolvido como parte das atividades práticas do curso, apli
 ## 📝 Licença
 
 Este projeto foi desenvolvido para fins educacionais, distribuição livre sob a licença **MIT**.
+
+---
+
+Visite o site [clicando aqui](https://bruno-has.github.io/projeto-ong/)
