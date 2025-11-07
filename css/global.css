@@ -100,7 +100,7 @@ footer {
 }
 
 .lista-nav li:hover {
-    color: var(--azul1);
+    color: #2f88ad;
 }
 
 .lista-nav a {
@@ -184,16 +184,16 @@ footer {
     gap: 5px;
 }
 
-.btn-projetos, .btn-cadastro, .btn-relatorio, .btn-voluntario, .btn-cadastrar, .btn-doacao, .btn-doacao-rapida {
+.btn-projetos, .btn-cadastro, .btn-relatorio, .btn-voluntario, .btn-cadastrar, .btn-doacao, .btn-doacao-rapida, .btn-adicionar-projeto {
+    text-align: center;
     border: 3px solid var(--azul2);
 }
 
 .btn-projetos, .btn-voluntario, .btn-doacao {
-    background-color: var(--fundo-conteudo);
     color: var(--azul2);
 }
 
-.btn-cadastro, .btn-relatorio, .btn-cadastrar, .btn-doacao-rapida {
+.btn-cadastro, .btn-relatorio, .btn-cadastrar, .btn-doacao-rapida, .btn-adicionar-projeto {
     background-image: linear-gradient(to top, var(--azul2), var(--azul1));
     color: #fff;
 }
@@ -235,7 +235,7 @@ a {
 
 h1 {
     font-size: 26px;
-    color: var(--azul1);
+    color: #2f88ad;
     text-shadow: var(--sombra-fraca);
     text-align: center;
 }
@@ -285,7 +285,7 @@ p {
         justify-content: space-between;
         gap: 30px;
         font-weight: bold;
-        color: var(--azul1);
+        color: #2f88ad;
     }
 
     .lista-nav li:hover {

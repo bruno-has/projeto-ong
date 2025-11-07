@@ -36,10 +36,11 @@
 }
 
 .card-projeto:hover {
-    background-image: linear-gradient(to bottom, var(--azul1) 10%, var(--fundo-conteudo));
+    background-image: linear-gradient(to bottom, var(--azul1), var(--fundo-conteudo) 60%);
 }
 
 .card-projeto img {
+    background-color: var(--fundo-conteudo);
     border: var(--borda);
     border-radius: 15px;
 }
@@ -58,7 +59,7 @@
     }
 
     .card-projeto:hover {
-        background-image: linear-gradient(to right, var(--azul1), var(--fundo-conteudo));
+        background-image: linear-gradient(to right, var(--azul1), var(--fundo-conteudo) 40%);
     }
     
     .card-projeto img {

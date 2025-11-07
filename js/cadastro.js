@@ -1,4 +1,4 @@
-/* Máscaras inputs */
+/* -------------- MÁSCARAS INPUTS -------------- */
 document.addEventListener('input', (e) => {
     const pergunta = e.target;
 
@@ -25,11 +25,12 @@ document.addEventListener('input', (e) => {
 })
 
 
+/* -------------- VALIDAÇÃO DE FORMULÁRIOS -------------- */
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('#formulario-cadastro')
     const nasc = document.querySelector('#nascimento')
 
-    /* Validação para cadastro de pessoas com 18 anos ou mais */
+    // Verifica idade mínima de 18 anos no cadastro 
     if (form) {
         form.addEventListener('submit', (e) => {
             const dataNasc = new Date(nasc.value)
@@ -58,18 +59,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputValor = document.querySelector('#ivalor')
     const projeto = document.querySelector('#iopcao')
 
-    /* Validação doação maior que 0 e validação da opção de projeto */
+    // Verifica se doação é maior que 0 e se a opção de projeto está selecionada
     if (formulario) {
         formulario.addEventListener('submit', (e) => {
             
             const valor = parseFloat(inputValor.value)
             
+            // Verifica se a doação é maior que 0
             if (isNaN(valor) || valor <= 0) {
                 alert('Insira um valor maior que 0 para a doação')
                 inputValor.focus()
                 return
             }
             
+            // Verifica se a opção de projeto foi selecionada
             if (projeto.selectedIndex === 0) {
                 alert('Selecione um projeto antes de continuar.')
                 projeto.focus()
@@ -84,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    /* Verifica se a URL contém algum parâmetro */
+    // Preenche select automaticamente se a URL contér algum parâmetro 
     const parametro = new URLSearchParams(window.location.search)
     const seletorCadastro = parametro.get('categoria')
     const seletorProjeto = parametro.get('iopcao')

@@ -1,7 +1,8 @@
-/* Filtro dos projetos */
+/* -------------- FILTRO DOS PROJETOS -------------- */
 const filtros = document.querySelectorAll('.filtro')
 const projetos = document.querySelectorAll('.card-projeto')
 
+// Percorre por todos os button.filtro
 filtros.forEach(botao => {
     botao.addEventListener('click', () => {
         // Remove classe ativo do botão anterior
