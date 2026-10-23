@@ -12,9 +12,7 @@ async function listarProjetos(req, res, next) {
 
 async function buscarProjeto(req, res, next) {
   try {
-    const id = Number(req.params.id)
-
-    const projeto = await projetosService.buscarProjeto(id);    
+    const projeto = await projetosService.buscarProjeto(req.id);    
     return res.status(200).json(projeto);
 
   } catch (erro) {

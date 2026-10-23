@@ -13,10 +13,6 @@ async function listarProjetos() {
 }
 
 async function buscarProjeto(id) {
-  if (!Number.isInteger(id) || id < 1) {
-    throw new ValidationError("ID inválido")
-  }
-
   const projeto = await projetosRepository.buscarProjetoPorId(id);
 
   if (!projeto) {
