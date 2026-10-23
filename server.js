@@ -8,6 +8,9 @@ app.use(express.json());
 const projetosRoute = require('./routes/projetosRoute');
 app.use('/projetos', projetosRoute);
 
+const errorHandler = require('./middlewares/errorHandler');
+app.use(errorHandler);
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
