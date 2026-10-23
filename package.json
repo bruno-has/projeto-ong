@@ -13,7 +13,7 @@
   "description": "A **ConectaONG** é um projeto acadêmico desenvolvido para a disciplina **Desenvolvimento Front-End para Web**. Que tem como objetivo criar uma plataforma onde organizações não governamentais (ONGs) possam gerenciar suas atividades, divulgar projetos, captar recursos e engajar voluntários.",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon js/server.js",
+    "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
