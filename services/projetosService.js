@@ -1,6 +1,6 @@
-const NotFoundError = require('../errors/NotFoundError');
-const ValidationError = require('../errors/ValidationError');
+const pool = require('../data/conexao');
 const projetosRepository = require('../repositories/projetosRepository');
+const NotFoundError = require('../errors/NotFoundError');
 
 async function listarProjetos() {
   const projetos = await projetosRepository.listarProjetos();
@@ -35,8 +35,36 @@ async function adicionarProjeto(nome, descricao, valor) {
   };
 }
 
+async function removerProjeto(id) {
+  const connection = await pool.getConnection();
+
+  try {
+    await connection.beginTransaction();
+
+    const projeto = await projetosRepository.buscarProjetoPorId(id, connection);
+    if (!projeto) {
+      throw new NotFoundError("Projeto não encontrado")
+    }
+
+    await projetosRepository.removerProjeto(id, connection);
+
+    await connection.commit();
+
+    return {
+      mensagem: "Projeto removido com sucesso"
+    }
+
+  } catch (erro) {
+    await connection.rollback();
+    throw erro;
+  } finally {
+    await connection.release();
+  }
+}
+
 module.exports = {
   listarProjetos,
   buscarProjeto,
   adicionarProjeto,
+  removerProjeto,
 }

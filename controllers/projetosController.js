@@ -34,8 +34,19 @@ async function adicionarProjeto(req, res, next) {
   }
 }
 
+async function removerProjeto(req, res, next) {
+  try { 
+    const removerProjeto = await projetosService.removerProjeto(req.id);
+    return res.status(200).json(removerProjeto);
+
+  } catch (erro) {
+    next(erro);
+  }
+}
+
 module.exports = {
   listarProjetos,
   buscarProjeto,
   adicionarProjeto,
+  removerProjeto,
 }

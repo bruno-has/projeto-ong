@@ -18,4 +18,9 @@ router.post('/',
   projetosController.adicionarProjeto
 );
 
+router.delete('/:id',
+  middleware.validarId,
+  projetosController.removerProjeto
+);
+
 module.exports = router;
