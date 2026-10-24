@@ -16,7 +16,17 @@ async function buscarProjetoPorId(id) {
   return linhas[0];
 }
 
+async function adicionarProjeto(nome, descricao, valor) {
+  const [linhas] = await conexao.query(
+    'INSERT INTO projetos VALUES (default, ?, ?, ?, default)', 
+    [nome, descricao, valor]
+  );
+
+  return linhas;
+}
+
 module.exports = {
   listarProjetos,
   buscarProjetoPorId,
+  adicionarProjeto,
 }

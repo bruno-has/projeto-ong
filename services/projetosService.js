@@ -22,7 +22,21 @@ async function buscarProjeto(id) {
   return projeto;
 }
 
+async function adicionarProjeto(nome, descricao, valor) {
+  const addProjeto = await projetosRepository.adicionarProjeto(nome, descricao, valor);
+  return {
+    mensagem: 'Projeto adicionado com sucesso',
+    projeto: {
+      id: addProjeto.insertId,
+      nome: nome,
+      descricao: descricao,
+      valor: valor
+    }
+  };
+}
+
 module.exports = {
   listarProjetos,
   buscarProjeto,
+  adicionarProjeto,
 }

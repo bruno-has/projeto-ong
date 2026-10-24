@@ -20,7 +20,22 @@ async function buscarProjeto(req, res, next) {
   }
 }
 
+async function adicionarProjeto(req, res, next) {
+  try {
+    const addProjeto = await projetosService.adicionarProjeto(
+      req.nome,
+      req.descricao,
+      req.valor
+    );
+    return res.status(201).json(addProjeto);
+
+  } catch (erro) {
+    next(erro);
+  }
+}
+
 module.exports = {
   listarProjetos,
   buscarProjeto,
+  adicionarProjeto,
 }

@@ -8,6 +8,14 @@ router.get('/', projetosController.listarProjetos);
 
 router.get('/:id', 
   middleware.validarId,
-  projetosController.buscarProjeto);
+  projetosController.buscarProjeto
+);
+
+router.post('/', 
+  middleware.validarNome,
+  middleware.validarDescricao,
+  middleware.validarValor,
+  projetosController.adicionarProjeto
+);
 
 module.exports = router;
